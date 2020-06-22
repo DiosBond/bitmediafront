@@ -54,8 +54,131 @@
       box-sizing: inherit;
   }
   .table_stat{
-    color: #FFFFFF;;
+    color: #FFFFFF;
     background: #3A80BA;
-    font-family: 'Montserat';
+    font-family: Montserrat;
   }
    
+  .header_block{
+      position: relative;
+      background: #3A80BA;
+      min-width: max-content;
+      /*width: 100%;*/
+      height: 72px;
+      /*position: fixed;*/
+    }
+
+  .header_logo{
+      position: absolute;
+      width: 136px;
+      height: 49px;
+      left: 130px;
+      top: 10px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 49px;
+      color: #FFFFFF;
+  }
+
+  .btn{
+      position: absolute;
+      width: 85px;
+      height: 20px;
+      left: 130px;
+      top: 88px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+
+      color: #CCCCCC;
+  }
+
+  .block_name{
+    position: absolute;
+    width: 253px;
+    height: 39px;
+    left: 130px;
+    top: 132px;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #1A1A1A;
+  }
+  .block_table{
+    position: absolute;
+    width: 70%;
+    height: 48px;
+    left: 130px;
+    top: 187px;
+  }
+
+  .footer{
+    
+    vertical-align: bottom;
+    position: fixed;
+    width: 100%;
+    height: 57px;
+    left: 0px;
+    bottom: 0;
+    background: #1C3B55;
+  }
+
+  .footer_text{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 142%;
+      text-align: center;
+
+      
+      color: #FFFFFF;
+  }
+
+  .footer_logo{
+      position: absolute;
+      width: 82px;
+      height: 29px;
+      left: 130px;
+      bottom: 14px;
+      /*top: 857px;
+      */
+      
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+      
+      color: #FFFFFF;
+  }
+
+  .footer_right{
+      position: absolute;
+      width: 147px;
+      height: 23px;
+      right: 130px;
+      bottom: 14px;
+      
+  }
+
+    .footer_center{
+      position: absolute;
+      width: 264px;
+      height: 23px;
+      left: 588px;
+      bottom: 14px;
+  }
+
+  ul.navbar li{
+      display: inline;
+      margin-right: 5px;
+  }

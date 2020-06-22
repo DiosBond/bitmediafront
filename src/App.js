@@ -6,56 +6,36 @@ import './css/style.css';
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-
+import Main from './view/Main';
 import Chart from './Charts';
 import Stat from './Stat';
+import Head from './view/Header';
+import Footer from './view/Footer';
+import Nav from './view/Nav';
 
 function App() {
   return (
+    <div>
+    <Head />
+    <Nav />
     <Router>
 
-<div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <Stat/>
+    <div>
     <Switch>
+      <Route exact path='/' component={Main}></Route>
       <Route exact path='/stat' component={Stat}></Route>
       <Route exact path='/chart' component={Chart}></Route>
     </Switch>
 
     </div>
     </Router>
+
+    <Footer />
     
-    
+    </div>
+     
   );
 }
-
-class Navigation extends React.Component {
-  render(){
-    return (
-      <div>
-          <ul>
-            <li><a href='/'>Main</a></li>
-            <li><a href='/stat'>Stat</a></li>
-            <li><a href='/chart'>Chart</a></li>
-          </ul>
-      </div>
-    )
-  }
-}
-//<img src={logo} className="App-logo" alt="logo" />
 
 
 export default App;

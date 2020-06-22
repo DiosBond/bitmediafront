@@ -18,9 +18,10 @@ function createData(id, first_name, last_name, email, gender, ip_address, clicks
 function Stat() {
   return (
     
-      <div> User Statistics 
-
-        <Table >
+      <div> 
+        <div className='block_name'>Users statistics</div>
+        <div>
+        <Table className='block_table'>
           <TableHead>
             <TableRow className='table_stat'>
               <TableCell>id</TableCell>
@@ -44,11 +45,8 @@ function Stat() {
             ))}
           </TableBody>
         </Table>
-      <ul>
-            <li><a href='/'>Main</a></li>
-            <li><a href='/stat'>Stat</a></li>
-            <li><a href='/chart'>Chart</a></li>
-      </ul>
+
+      </div>
       </div>
   );
 }
