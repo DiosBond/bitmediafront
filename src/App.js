@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import './css/style.css';
+
+import Stat from './Stat';
 
 function App() {
   return (
@@ -19,7 +22,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <Stat/>
     </div>
+    
   );
 }
 
