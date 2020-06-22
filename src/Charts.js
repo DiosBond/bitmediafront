@@ -7,7 +7,7 @@ import './css/style.css';
 function Charts() {
   return (
     
-      <div> TEXT </div>
+      <div> TEXT CHART</div>
     
   );
 }

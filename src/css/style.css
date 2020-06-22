@@ -53,5 +53,9 @@
   *, *::before, *::after{
       box-sizing: inherit;
   }
-  
+  .table_stat{
+    color: #FFFFFF;;
+    background: #3A80BA;
+    font-family: 'Montserat';
+  }
    

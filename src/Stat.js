@@ -20,9 +20,9 @@ function Stat() {
     
       <div> User Statistics 
 
-        <Table>
+        <Table >
           <TableHead>
-            <TableRow>
+            <TableRow className='table_stat'>
               <TableCell>id</TableCell>
               <TableCell>First name</TableCell>
               <TableCell>Last name</TableCell>
@@ -35,16 +35,19 @@ function Stat() {
           </TableHead>
           <TableBody>
             {testdata.map((row) => (
-              <TableRow key = {row.id}>
+              <TableRow key = {row.user_id}>
                 <TableCell component='th'>{row.user_id}</TableCell>
-                
+                <TableCell component='th'>{row.first_name}</TableCell>
+                <TableCell component='th'>{row.page_views}</TableCell>
+                <TableCell component='th'>{row.clicks}</TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       <ul>
-        <li>1</li>
-        <li>2</li>
+            <li><a href='/'>Main</a></li>
+            <li><a href='/stat'>Stat</a></li>
+            <li><a href='/chart'>Chart</a></li>
       </ul>
       </div>
   );
