@@ -29,13 +29,13 @@ class Charts extends React.Component {
       <div> TEXT CHART</div>
       <h2>{this.props.match.params.id}</h2>
       <h2>{urlChart+this.props.match.params.id}</h2>
-      <div>{data}</div>
+      
       <ul>
       {data.map((item, i) => (
           
           <li key={i} >
           
-          {item.page_views} 
+          {item.page_views} " " {item.clicks}
           </li>
       ))
       }
