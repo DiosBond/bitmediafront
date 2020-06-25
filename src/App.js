@@ -13,6 +13,7 @@ import Head from './view/Header';
 import Footer from './view/Footer';
 import Nav from './view/Nav';
 
+
 function App() {
   return (
     <div>
