@@ -17,7 +17,13 @@ const testdata = [{"user_id":33,"date":"2019-10-02","page_views":260,"clicks":56
 //   return {id, first_name, last_name, email, gender, ip_address, clicks, views};
 // }
 
-function Stat() {
+class Stat extends React.Component {
+//function Stat() {
+    constructor(props) {
+      super(props);
+      this.state ={ page: this.props.match.params.page};
+    }
+    render(){
   return (
     
       <div> 
@@ -49,9 +55,9 @@ function Stat() {
         </Table>
 
       </div>
-      {PageNum(3)}
+      {PageNum(this.props.match.params.page)}
       </div>
   );
-}
+}}
 
 export default Stat;

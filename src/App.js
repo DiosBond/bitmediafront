@@ -24,7 +24,7 @@ function App() {
     <div>
     <Switch>
       <Route exact path='/' component={Main}></Route>
-      <Route exact path='/stat' component={Stat}></Route>
+      <Route exact path='/stat/:page' component={Stat}></Route>
       <Route path='/user/:id' component={Chart}></Route>
     </Switch>
 

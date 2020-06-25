@@ -2,19 +2,19 @@ import React from 'react';
 //import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import './css/style.css';
-const urlChart = "localhost:8080/"
+const urlChart = "http://localhost:8080/stat/"
 
 
 class Charts extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state ={ user: id, data: [] };
+    this.state ={ user: this.props.match.params.id, data: [] };
   }
 
   componentDidMount = async() => {
-    const response = await fetch(urlChart);
-    const data = await response.json() 
+    const response = await fetch(urlChart+this.props.match.params.id);
+    const data = await response.json();
     //console.log(data)
     this.setState({data})
   }
@@ -28,6 +28,18 @@ class Charts extends React.Component {
       <div> 
       <div> TEXT CHART</div>
       <h2>{this.props.match.params.id}</h2>
+      <h2>{urlChart+this.props.match.params.id}</h2>
+      <div>{data}</div>
+      <ul>
+      {data.map((item, i) => (
+          
+          <li key={i} >
+          
+          {item.page_views} 
+          </li>
+      ))
+      }
+      </ul>
       </div> 
   );
   }

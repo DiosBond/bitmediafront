@@ -1,8 +1,6 @@
 import React from 'react';
-
-
 import '../css/style.css';
-
+// eslint-disable-next-line
 function createLi(num){
     let text = "";
     for (let i = 0; i < 6; i++){
@@ -22,12 +20,10 @@ function Page(num) {
   return (
     
       <div>
-          <ul className='navbar'>
+          <ul className='pageNumber'>
 
               {/* {createLi(num)}*/}
-              <li><a href='/'>Main</a></li>
-              <li><a href='/stat'>Stat</a></li>
-              <li><a href='/chart'>Chart</a></li> 
+                <li><a href='/stat/'>{num}</a></li>
           </ul>
       </div>
     
