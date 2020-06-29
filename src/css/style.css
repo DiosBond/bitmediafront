@@ -182,3 +182,11 @@
       display: inline;
       margin-right: 5px;
   }
+  .pageNumber li {
+    display: inline;
+    margin-right: 5px;
+  }
+
+  .activpage{
+    background: yellow;
+  }

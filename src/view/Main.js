@@ -10,8 +10,7 @@ function Charts() {
       <div> Main Page
           <ul>
               <li><a href='/'>Main</a></li>
-              <li><a href='/stat'>Stat</a></li>
-              <li><a href='/chart'>Chart</a></li>
+              <li><a href='/stat/1'>Stat</a></li>
           </ul>
       </div>
     
