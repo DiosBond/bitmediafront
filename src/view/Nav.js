@@ -10,7 +10,7 @@ function Nav() {
       <div>
           <ul className='navbar'>
               <li><a href='/'>Main</a></li>
-              <li><a href='/stat'>Stat</a></li>
+              <li><a href='/stat/1'>Stat</a></li>
               <li><a href='/user'>Chart</a></li>
           </ul>
       </div>

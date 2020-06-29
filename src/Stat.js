@@ -8,7 +8,7 @@ import TableBody from '@material-ui/core/TableBody';
 
 import './css/style.css';
 import PageNum from './view/PageNumber';
-
+const urlUsers = "http://localhost:8080/users/"
 
 const testdata = [{"user_id":33,"date":"2019-10-02","page_views":260,"clicks":565},{"user_id":38,"date":"2019-10-02","page_views":766,"clicks":258},{"user_id":75,"date":"2019-10-02","page_views":528,"clicks":776},{"user_id":94,"date":"2019-10-02","page_views":323,"clicks":373},{"user_id":101,"date":"2019-10-02","page_views":721,"clicks":723},{"user_id":111,"date":"2019-10-02","page_views":304,"clicks":726},{"user_id":119,"date":"2019-10-02","page_views":724,"clicks":505},{"user_id":121,"date":"2019-10-02","page_views":956,"clicks":133},{"user_id":139,"date":"2019-10-02","page_views":496,"clicks":327},{"user_id":159,"date":"2019-10-02","page_views":702,"clicks":917},{"user_id":171,"date":"2019-10-02","page_views":635,"clicks":519},{"user_id":173,"date":"2019-10-02","page_views":503,"clicks":930},{"user_id":187,"date":"2019-10-02","page_views":946,"clicks":552},{"user_id":190,"date":"2019-10-02","page_views":369,"clicks":344},{"user_id":219,"date":"2019-10-02","page_views":981,"clicks":196},{"user_id":224,"date":"2019-10-02","page_views":108,"clicks":399}];
 
@@ -21,9 +21,22 @@ class Stat extends React.Component {
 //function Stat() {
     constructor(props) {
       super(props);
-      this.state ={ page: this.props.match.params.page};
+      this.state ={ page: this.props.match.params.page, data: [] };
     }
+  
+    componentDidMount = async() => {
+      const response = await fetch(urlUsers + this.props.match.params.page);
+      const data = await response.json();
+      //console.log(data)
+      this.setState({data})
+    }
+  
+
+
     render(){
+
+      const data = Array.from(this.state.data);
+
   return (
     
       <div> 
@@ -43,11 +56,15 @@ class Stat extends React.Component {
             </TableRow>
           </TableHead>
           <TableBody>
-            {testdata.map((row) => (
+            {data.map((row) => (
               <TableRow key = {row.user_id}>
-                <TableCell component='th'>{row.user_id}</TableCell>
+                <TableCell component='th'>{row.id}</TableCell>
                 <TableCell component='th'>{row.first_name}</TableCell>
-                <TableCell component='th'>{row.page_views}</TableCell>
+                <TableCell component='th'>{row.last_name}</TableCell>
+                <TableCell component='th'>{row.email}</TableCell>
+                <TableCell component='th'>{row.gender}</TableCell>
+                <TableCell component='th'>{row.ip_address}</TableCell>
+                <TableCell component='th'>{row.views}</TableCell>
                 <TableCell component='th'>{row.clicks}</TableCell>
               </TableRow>
             ))}
@@ -57,6 +74,7 @@ class Stat extends React.Component {
       </div>
       {PageNum(this.props.match.params.page)}
       </div>
+
   );
 }}
 
