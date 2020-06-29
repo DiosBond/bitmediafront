@@ -30,11 +30,11 @@ class Charts extends React.Component {
     return (
       <div> 
         <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
-      <div> TEXT CHART</div>
+      {/*
       <h2>{this.props.match.params.id}</h2>
-      <h2>{urlChart+this.props.match.params.id}</h2>
+      <h2>{urlChart+this.props.match.params.id}</h2> */}
       
-      <ul>
+      {/* <ul>
       {data.map((item, i) => (
           
           <li key={i} >
@@ -43,11 +43,11 @@ class Charts extends React.Component {
           </li>
       ))
       }
-      </ul>
+      </ul> */}
 
       <LineChart
-        width={500}
-        height={300}
+        width={800}
+        height={500}
         data={data}
         margin={{
           top: 5, right: 30, left: 20, bottom: 5,

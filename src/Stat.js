@@ -4,6 +4,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableBody from '@material-ui/core/TableBody';
+import {Link} from 'react-router-dom';
 
 
 import './css/style.css';
@@ -27,11 +28,8 @@ class Stat extends React.Component {
     componentDidMount = async() => {
       const response = await fetch(urlUsers + this.props.match.params.page);
       const data = await response.json();
-      //console.log(data)
       this.setState({data})
     }
-  
-
 
     render(){
 
@@ -57,10 +55,10 @@ class Stat extends React.Component {
           </TableHead>
           <TableBody>
             {data.map((row) => (
-              <TableRow key = {row.user_id}>
-                <TableCell component='th'>{row.id}</TableCell>
-                <TableCell component='th'>{row.first_name}</TableCell>
-                <TableCell component='th'>{row.last_name}</TableCell>
+                <TableRow key = {row.id}>
+                <TableCell component='th'><Link to={'/user/'+row.id}>{row.id}</Link></TableCell>
+                <TableCell component='th'><Link to={'/user/'+row.id}>{row.first_name}</Link></TableCell>
+                <TableCell component='th'><Link to={'/user/'+row.id}>{row.last_name}</Link></TableCell>
                 <TableCell component='th'>{row.email}</TableCell>
                 <TableCell component='th'>{row.gender}</TableCell>
                 <TableCell component='th'>{row.ip_address}</TableCell>

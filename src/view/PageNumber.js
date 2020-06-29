@@ -8,12 +8,9 @@ function createLi(num){
             text = text + num;
         }
     } 
-    
-    
+      
     return text
-   
-        
-    
+
 }
 
 function Page(num) {
