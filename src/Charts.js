@@ -5,7 +5,10 @@ import {
 } from 'recharts';
 
 import './css/style.css';
-const urlChart = "http://localhost:8080/stat/"
+import conf from './config';
+
+//const urlChart = "http://localhost:8080/stat/";   //for locally test
+const urlChart = conf.serverconnect.link + ":" + conf.serverconnect.port + "/stat/";
 
 
 class Charts extends React.Component {
@@ -18,7 +21,6 @@ class Charts extends React.Component {
   componentDidMount = async() => {
     const response = await fetch(urlChart+this.props.match.params.id);
     const data = await response.json();
-    //console.log(data)
     this.setState({data})
   }
 

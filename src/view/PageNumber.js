@@ -51,8 +51,8 @@ function createLi(num){
 function Page(num) {
   return (
     
-      <div>
-          <ul className='pageNumber'>
+      <div className='pageNumber'>
+          <ul>
 
               {createLi(num)}
 
