@@ -4,17 +4,17 @@ import React from 'react';
 import '../css/style.css';
 
 
-function Charts() {
+function Main() {
   return (
     
-      <div> Main Page
-          <ul>
+      <div>
+          {/* <ul>
               <li><a href='/'>Main</a></li>
               <li><a href='/stat/1'>Stat</a></li>
-          </ul>
+          </ul> */}
       </div>
     
   );
 }
 
-export default Charts;
+export default Main;
