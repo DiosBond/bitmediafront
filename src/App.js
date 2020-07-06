@@ -20,7 +20,7 @@ function App() {
     <Head />
     <Nav />
     <Router>
-
+{/* 
     <div>
     <Switch>
       <Route exact path='/' component={Main}></Route>
@@ -28,7 +28,7 @@ function App() {
       <Route path='/user/:id' component={Chart}></Route>
     </Switch>
 
-    </div>
+    </div> */}
     </Router>
 <div>
     <Footer />
